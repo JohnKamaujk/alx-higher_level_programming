@@ -2,8 +2,5 @@
 # Author - Johnnyjk
 
 def islower(c):
-    """Function checks for lowercase characters."""
-    if ord(c) >= 97 and ord(c) <= 122:
-        return True
-    else:
-        return False
+    # Check if the ASCII value of the character is within the lowercase range
+    return ord('a') <= ord(c) <= ord('z')
