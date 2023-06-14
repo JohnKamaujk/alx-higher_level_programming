@@ -5,7 +5,7 @@ def print_sorted_dictionary(a_dictionary):
     """
     A function that prints a dictionary by ordered keys
     """
-    keys = list(a_dictionary.keys())
-    keys.sort()
-    for key in keys:
-        print("{}: {}".format(key, a_dictionary[key]))
+    sorted_keys = sorted(list(a_dictionary.keys()))
+    for key in sorted_keys:
+        value = a_dictionary[key]
+        print("{}: {}".format(key, value))
