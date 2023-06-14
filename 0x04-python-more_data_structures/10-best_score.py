@@ -5,11 +5,11 @@ def best_score(a_dictionary):
     A function that returns a key with the biggest integer value.
     """
     if a_dictionary:
-        max_key = ""
-        max_value = 0
-
-        for key, value in a_dictionary.items():
-            if a_dictionary[key] > max_value:
-                max_key = key
-                max_value = a_dictionary[key]
-    return max_key
+        my_list = list(a_dictionary.keys())
+        score = 0
+        leader = ""
+        for i in my_list:
+            if a_dictionary[i] > score:
+                score = a_dictionary[i]
+                leader = i
+        return leader
