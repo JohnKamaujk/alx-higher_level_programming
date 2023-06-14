@@ -4,12 +4,13 @@ def best_score(a_dictionary):
     """
     A function that returns a key with the biggest integer value.
     """
-    max_key = None
-    max_value = float('-inf')  # Initialize with negative infinity
+    if a_dictionary:
+        max_key = None
+        max_value = 0
 
-    for key, value in a_dictionary.items():
-        if value > max_value:
-            max_key = key
-            max_value = value
+        for key, value in a_dictionary.items():
+            if value > max_value:
+                max_key = key
+                max_value = value
 
     return max_key
