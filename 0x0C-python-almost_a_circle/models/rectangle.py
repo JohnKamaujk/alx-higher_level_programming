@@ -119,6 +119,20 @@ class Rectangle(Base):
         rectangle = ""
         symbol = "#"
 
-        for row in range(self.__height):
-            rectangle += (symbol*self.__width) + "\n"
+        # for row in range(self.__height):
+        #     rectangle += (symbol*self.__width) + "\n"
+        # print(rectangle, end="")
+
+        print("\n" * self.y, end="")
+
+        for i in range(self.height):
+            rectangle += (" " * self.x) + (symbol*self.width) + "\n"
         print(rectangle, end="")
+
+    def __str__(self):
+        """
+            returns a string format overide __str__ method
+        """
+        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
+                                                self.__x, self.__y,
+                                                self.__width, self.__height)
