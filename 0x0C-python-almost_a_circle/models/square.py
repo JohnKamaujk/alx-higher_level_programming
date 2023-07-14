@@ -66,3 +66,12 @@ class Square(Rectangle):
         return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id,
                                              self.x, self.y,
                                              self.width)
+
+    def to_dictionary(self):
+        """
+            returns the dictionary repr of a square
+        """
+        return {'id': getattr(self, "id"),
+                'x': getattr(self, "x"),
+                'size': getattr(self, "size"),
+                'y': getattr(self, "y")}
