@@ -42,13 +42,13 @@ class Base:
         Args:
             list_objs (list): A list of inherited Base instances.
         """
-        filename = str(cls.__name__) + ".json"
+        filename = cls.__name__ + ".json"
 
         with open(filename, "w") as jsonfile:
             if list_objs is None:
                 jsonfile.write("[]")
             else:
-                list_dicts = [obj.to_dictionary for obj in list_objs]
+                list_dicts = [obj.to_dictionary() for obj in list_objs]
                 list_json = Base.to_json_string(list_dicts)
                 jsonfile.write(list_json)
 
