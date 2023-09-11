@@ -5,7 +5,7 @@ if (isNaN(process.argv[2])) {
 } else {
   const times = parseInt(process.argv[2]);
 
-  for (let i = 0; i < times; i++){
+  for (let i = 0; i < times; i++) {
     console.log('X'.repeat(times));
   }
 }
