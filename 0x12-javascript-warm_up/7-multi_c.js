@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-if (isNaN(process.argv[2])){
+if (isNaN(process.argv[2])) {
   console.log('Missing number of occurrences');
 } else {
   const times = Number(process.argv[2]);
