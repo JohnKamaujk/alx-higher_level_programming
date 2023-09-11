@@ -12,6 +12,6 @@ if (isNaN(process.argv[2])) {
   console.log(1);
 } else {
   const value = parseInt(process.argv[2]);
-  answer = factorial(value);
+  const answer = factorial(value);
   console.log(answer);
 }
