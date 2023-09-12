@@ -1,10 +1,9 @@
-exports.nbOccurences = function (list, searchElement) {
-  let count = 0;
+#!/usr/bin/node
 
-  for (let i = 0; i < list.length; i++) {
-    if (list[i] === searchElement) {
-      count++;
-    }
-  }
+exports.nbOccurences = function (list, searchElement) {
+  const count = list.reduce((accumulator, currentValue) => {
+    return currentValue === searchElement ? accumulator + 1 : accumulator;
+  }, 0);
+
   return count;
 };

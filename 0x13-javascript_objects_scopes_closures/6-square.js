@@ -10,7 +10,7 @@ class Square extends Rectangle {
     const symbol = c === undefined ? 'X' : c;
 
     for (let i = 0; i < this.height; i++) {
-      console.log(symbol.repeat(this.width));
+      console.log(`${symbol}`.repeat(this.width));
     }
   }
 }
