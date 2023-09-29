@@ -9,8 +9,10 @@ import sys
 
 url = sys.argv[1]
 
+request = urllib.request.Request(url)
+
 try:
-    with urllib.request.urlopen(url) as response:
+    with urllib.request.urlopen(request) as response:
         x_request_id = response.getheader('X-Request-Id')
         if x_request_id:
             print(x_request_id)
