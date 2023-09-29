@@ -10,7 +10,7 @@ from requests.auth import HTTPBasicAuth
 
 def get_github_id(username, personal_access_token):
     # Define the GitHub API URL for user information
-    url = f'https://api.github.com/users'
+    url = f'https://api.github.com/user'
 
     # Create a Basic Authentication header
     auth = HTTPBasicAuth(username, personal_access_token)
