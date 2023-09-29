@@ -28,8 +28,8 @@ def get_github_commits(owner, repo):
 
 if __name__ == "__main__":
     # Extract the owner and repo names from command line arguments
-    owner = sys.argv[1]
-    repo = sys.argv[2]
+    owner = sys.argv[2]
+    repo = sys.argv[1]
 
     # Call the function to fetch and display the GitHub commits
     get_github_commits(owner, repo)
