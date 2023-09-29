@@ -5,6 +5,7 @@
 """
 import sys
 import requests
+from requests.auth import HTTPBasicAuth
 
 
 def get_github_id(username, personal_access_token):
@@ -12,7 +13,7 @@ def get_github_id(username, personal_access_token):
     url = f'https://api.github.com/users/{username}'
 
     # Create a Basic Authentication header
-    auth = (username, personal_access_token)
+    auth = HTTPBasicAuth(username, personal_access_token)
 
     # Send a GET request to the GitHub API with Basic Authentication
     response = requests.get(url, auth=auth)
@@ -23,6 +24,8 @@ def get_github_id(username, personal_access_token):
         user_data = response.json()
         github_id = user_data.get('id')
         return github_id
+    else:
+        return None
 
 
 if __name__ == "__main__":
