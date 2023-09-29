@@ -20,7 +20,6 @@ if __name__ == '__main__':
     try:
         with urllib.request.urlopen(req) as response:
             content = response.read().decode('utf-8')
-            print("Your email is: {}".format(email))
             print(content)
     except Exception as e:
         print(f"Error: {e}")
