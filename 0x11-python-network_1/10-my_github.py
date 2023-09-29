@@ -23,8 +23,6 @@ def get_github_id(username, personal_access_token):
         user_data = response.json()
         github_id = user_data.get('id')
         return github_id
-    else:
-        return None
 
 
 if __name__ == "__main__":
