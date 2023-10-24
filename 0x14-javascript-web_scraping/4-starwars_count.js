@@ -10,9 +10,11 @@ if (process.argv.length !== 3) {
 const apiUrl = process.argv[2];
 
 request(apiUrl, (error, response, body) => {
-  const filmData = JSON.parse(body);
-  const wedgeAntillesFilms = filmData.results.filter(film => {
-    return film.characters.some((character) => character === 'https://swapi-api.alx-tools.com/api/people/18/');
-  });
-  console.log(wedgeAntillesFilms.length);
+  if (!error) {
+    const filmData = JSON.parse(body);
+    const wedgeAntillesFilms = filmData.results.filter(film => {
+      return film.characters.some((character) => character === 'https://swapi-api.alx-tools.com/api/people/18/');
+    });
+    console.log(wedgeAntillesFilms.length);
+  }
 });
