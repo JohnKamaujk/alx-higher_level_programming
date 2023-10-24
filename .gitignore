@@ -6,3 +6,7 @@ __pycache__/
 
 #virtual env
 venv/
+
+node_modules/
+package-lock.json
+package.json
