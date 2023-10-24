@@ -16,7 +16,4 @@ request(url)
   .on('error', (error) => {
     console.error(error);
   })
-  .pipe(fileStream)
-  .on('close', () => {
-    console.log(`Data from ${url} has been saved to ${filePath}`);
-  });
+  .pipe(fileStream);
