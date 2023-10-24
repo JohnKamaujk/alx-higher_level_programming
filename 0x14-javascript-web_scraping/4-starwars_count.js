@@ -1,12 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
 
-// Check if the url is provided as a command-line argument
-if (process.argv.length !== 3) {
-  console.error('Usage: ./3-starwars_count.js <url>');
-  process.exit(1);
-}
-
 const apiUrl = process.argv[2];
 
 request(apiUrl, (error, response, body) => {
