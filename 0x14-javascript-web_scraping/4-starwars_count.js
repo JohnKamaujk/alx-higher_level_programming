@@ -17,7 +17,7 @@ request(apiUrl, (error, response, body) => {
   } else {
     const filmData = JSON.parse(body);
     const wedgeAntillesFilms = filmData.results.reduce((count, film) => {
-      const hasWedgeAntilles = film.characters.find((character) => character.endsWith('/18/'));
+      const hasWedgeAntilles = film.characters.some((character) => character.endsWith('/18/'));
       return count + (hasWedgeAntilles ? 1 : 0);
     }, 0);
     console.log(wedgeAntillesFilms);
